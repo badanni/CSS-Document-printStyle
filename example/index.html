@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+</head>
+<style>
+    @page {
+    size: 21cm 29.7cm;
+    margin: 10mm 10mm 10mm 10mm;
+     /* change the margins as you want them to be. */
+    }
+    .pagina{
+		height: 26.7cm;
+		width: 19cm;
+        min-height: 26.7cm;
+		min-width: 19cm;
+        max-height: 26.7cm;
+		max-width: 19cm;
+		border-style: solid;
+		/*padding: 15px;*/
+		position: relative;
+        counter-increment: page;
+	}
+    .pagina header {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+    .pagina header::before {
+        content: "Nivel de acceso: " attr(nivel);
+        position: relative;
+        text-align: left;
+        float:left;
+    }
+    .pagina header::after {
+        content: attr(formato);
+        position: relative;
+        text-align: right;
+        float:right;
+    }
+    .pagina footer {
+        font-size: 9pt;
+        bottom:0;
+        width: 100%;
+        position: absolute;
+
+    }
+    .pagina footer::after {
+        content: "Pag. " counter(page);
+        position: relative;
+        text-align: right;
+        float: right;
+    }
+    .pagina p {
+        max-width: inherit;
+        max-height: auto;
+        white-space: normal; 
+        overflow-y: visible;
+        overflow: hidden;
+        text-overflow: clip; 
+        text-align: justify;
+        overflow-wrap: break-word;
+        /*display: inline-block;*/
+    }
+    end {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+    }
+    end::after {
+        content: "-- FIN DE ARCHIVO --";
+        display: block;
+        text-align: center;
+    }
+    main::before {
+        counter-reset: page;
+    }
+    @media print {
+        section {
+            clear: both;
+            page-break-after: always;
+        }
+        body {
+            margin: 0;
+            color: #000;
+            background-color: #fff;
+        }
+    }	
+    </style>
+<body>
+<main>
+    <section class="pagina">
+        <header nivel="INTERNO" formato="FAB01-01 rev 2">contenido</header>
+        <h1>Soy un titulo ejemplo</h1>
+        <p>Lorem ipsum dolor. Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </p>
+        <footer>Documento controlado, prohibida su reproducción parcial o total sin autorización</footer>
+    </section>
+    <section class="pagina">
+        <header nivel="CONFIDENCIAL" formato="FPG01-01 rev 2">qwe123</header>
+        <p>asasa</p>
+        <figure>
+            <img src="./prueba/src/logo.svg" alt="hola">
+            <figcaption>hola</figcaption>
+        </figure>
+        <footer>Documento controlado, prohibida su reproducción parcial o total sin autorización</footer>
+        <end>ads</end>
+    </section>
+</main>
+</body>
+</html>
