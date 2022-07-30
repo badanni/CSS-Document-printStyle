@@ -6,4 +6,6 @@
 
 ## Uso
 tag section continene la forma de la hoja
-> <section class="pagina"> <-- Definir el tamaño de la hoja con borde  
+```
+<section class="pagina"> <-- Definir el tamaño de la hoja con borde  
+```
