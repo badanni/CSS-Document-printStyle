@@ -22,13 +22,13 @@
         text-align: center;
     }
     .pagina header::before {
-        content: "Nivel de acceso: " attr(nivel);
+        content: attr(pre_izq) " " attr(izq);
         position: relative;
         text-align: left;
         float:left;
     }
     .pagina header::after {
-        content: attr(formato);
+        content: attr(pre_der) " " attr(der);
         position: relative;
         text-align: right;
         float:right;
@@ -63,7 +63,7 @@
         text-align: center;
     }
     end::after {
-        content: "-- FIN DE ARCHIVO --";
+        content: "--> FIN DE ARCHIVO <--";
         display: block;
         text-align: center;
     }
