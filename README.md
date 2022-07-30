@@ -1,9 +1,6 @@
 # CSS Document printStyle
  CSS hoja con borde, pie de pagina y cabecera para imprimir
 
-## Licencia
-[Licencia CC-BY](https://creativecommons.org/licenses/by/4.0/deed.es)
-
 ## Ejemplo
 
 ```
