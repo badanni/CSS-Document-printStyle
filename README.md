@@ -4,8 +4,8 @@
 ## Licencia
 [Licencia CC-BY](https://creativecommons.org/licenses/by/4.0/deed.es)
 
-## Uso
-tag section continene la forma de la hoja
+## Ejemplo
+
 ```
 <section class="pagina"> <-- Crear la hoja con borde para imprimir
     <header pre_izq="Nivel de acceso:" izq="INTERNO" pre_der="Formato:" der="FAB01-01 rev 2">Centro</header> <-- Cabecera 1 linea
